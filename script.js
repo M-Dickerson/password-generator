@@ -23,11 +23,11 @@ var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numeric = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 var specialCharacters = ["!", "@", "#", "$", "%"];
-//  * Initial prompt that asks the user how long do they want their password
+//  * Initial prompt that asks the user how long they want their password to be
 function generatePassword() {
   var userInput = window.prompt("How long do you want your password to be?");
   var passwordLength = parseInt(userInput);
-    // * If the initial criteria entered doesn't match the requirements the user is prompted to try again
+    // * If the initial criteria entered doesn't match the needed requirements the user is prompted to try again
   if (isNaN(passwordLength)) {
       window.alert("Invalid. Please enter a number between 8 and 128");
       return "Try again";
@@ -36,10 +36,25 @@ function generatePassword() {
         window.alert("Password length has to be at minimum 8 characters and at maximum 128)");
         return "Try again";}
 
-  var lowerCase = window.confirm("Do you want to include lowercase letters in your password?")
-  var upperCase = window.confirm("Do you want to include uppercase letters in your password?")
-  var numeric = window.confirm("Do you want to include numbers in your password?")
-  var specialCharacters = window.confirm("Do you want to include lowercase letters in your password?")
+  var userlowerCase = window.confirm("Do you want to include lowercase letters in your password?");
+  var userupperCase = window.confirm("Do you want to include uppercase letters in your password?");
+  var usernumeric = window.confirm("Do you want to include numbers in your password?");
+  var userspecialCharacters = window.confirm("Do you want to include lowercase letters in your password?");
+  var combined = [];
+
+  if (userlowerCase === true) {
+    combined.push(lowerCase)
+  }
+  if (userupperCase === true) {
+    combined.push(upperCase)
+  }
+  if (usernumeric === true) {
+    combined.push(numeric)
+  }
+  if (userspecialCharacters === true) {
+    combined.push(specialCharacters)
+  }
+  console.log(combined)
 }
 
 
