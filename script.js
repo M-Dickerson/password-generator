@@ -18,16 +18,16 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Arrays
+// * Text characters for password
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numeric = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 var specialCharacters = ["!", "@", "#", "$", "%"];
-
+//  * Initial prompt that asks the user how long do they want their password
 function generatePassword() {
   var userInput = window.prompt("How long do you want your password to be?");
   var passwordLength = parseInt(userInput);
-    
+    // * If the initial criteria entered doesn't match the requirements the user is prompted to try again
   if (isNaN(passwordLength)) {
       window.alert("Invalid. Please enter a number between 8 and 128");
       return "Try again";
