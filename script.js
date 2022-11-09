@@ -27,15 +27,23 @@ var specialCharacters = ["!", "@", "#", "$", "%"];
 function generatePassword() {
   var userInput = window.prompt("How long do you want your password to be?");
   var passwordLength = parseInt(userInput);
-    if (isNaN(passwordLength)) {
-      window.alert("Invalid input. Please enter a number between 8 and 128");
-      return;
-    }
-    if (passwordLength < 8 || passwordLength > 128) {
-      window.alert("Password length has to be at minimum 8 characters (max 128)");
-      return;
-    }
-    }
+    
+  if (isNaN(passwordLength)) {
+      window.alert("Invalid. Please enter a number between 8 and 128");
+      return "Try again";
+      }
+  if (passwordLength < 8 || passwordLength > 128) {
+        window.alert("Password length has to be at minimum 8 characters and at maximum 128)");
+        return "Try again";}
+
+  var lowerCase = window.confirm("Do you want to include lowercase letters in your password?")
+  var upperCase = window.confirm("Do you want to include uppercase letters in your password?")
+  var numeric = window.confirm("Do you want to include numbers in your password?")
+  var specialCharacters = window.confirm("Do you want to include lowercase letters in your password?")
+}
+
+
+  
 
 // Write password to the #password input
 function writePassword() {
