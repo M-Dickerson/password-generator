@@ -15,15 +15,14 @@
 // THEN the password is either displayed in an alert or written to the page
 
 
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword(params) {
-  
-
-  return "password";
-}
+// Arrays
+var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var numeric = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+var specialCharacters = ["!", "@", "#", "$", "%"];
 
 // Write password to the #password input
 function writePassword() {
@@ -36,11 +35,10 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// arrays for all four choices
-var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var numeric = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
-var specialCharacters = ["!", "@", "#", "$", "%"];
 // conditional statements aka if
+
 // validate user selection
 // loop
+for (var i = 0; i < 128; i++) {
+  console.log("")
+}
