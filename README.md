@@ -6,7 +6,7 @@ The motivation and purpose for this project was to help the browser generate a p
 
 ## Usage
 
-Link to deployed application: [Link to app]()
+Link to deployed application: [Link to app](https://m-dickerson.github.io/password-generator/)
 
 To start the password generator you first have to click the red button. After that, you follow the instructions given to you on the prompts and at the end the generator will give you your password!
 
