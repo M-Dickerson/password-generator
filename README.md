@@ -6,13 +6,12 @@ The motivation and purpose for this project was to help the browser generate a p
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Link to deployed application: [Link to app]()
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+To start the password generator you first have to click the red button. After that, you follow the instructions given to you on the prompts and at the end the generator will give you your password!
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![Screenshot of application](assets/images/screenshot.png)
+
 
 ## Credits
 
