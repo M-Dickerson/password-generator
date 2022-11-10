@@ -25,36 +25,36 @@ function generatePassword() {
   var userLowerCase = window.confirm("Do you want to include lowercase letters in your password?");
   var userUpperCase = window.confirm("Do you want to include uppercase letters in your password?");
   var userNumeric = window.confirm("Do you want to include numbers in your password?");
-  var userSpecialCharacters = window.confirm("Do you want to include lowercase letters in your password?");
+  var userSpecialCharacters = window.confirm("Do you want to include special characters in your password?");
 // Combines each array into one
   if (userLowerCase === true) {
     var combined = lowerCase.concat(combined);
-    doublecombined.push(lowerCase)
+    doublecombined.push(lowerCase);
   }
   if (userUpperCase === true) {
     var combined = upperCase.concat(combined);
-    doublecombined.push(upperCase)
+    doublecombined.push(upperCase);
   }
   if (userNumeric === true) {
     var combined = numeric.concat(combined);
-    doublecombined.push(numeric)
+    doublecombined.push(numeric);
   }
   if (userSpecialCharacters === true) {
     var combined = specialCharacters.concat(combined);
-    doublecombined.push(specialCharacters)
+    doublecombined.push(specialCharacters);
   }
 // If the user doesn't select anything at all they get the error message try again
   if (!userLowerCase && !userUpperCase && !userNumeric && !userSpecialCharacters) {
       window.alert("Please pick at least one character type for your password");
-      return "Try again"
+      return "Try again";
   }
-  
-  doublecombined = doublecombined.join()
-  window.alert("Your password is " + passwordLength + " characters long!")
+// Generates the password and puts it into the provided box
+  doublecombined = doublecombined.join();
+  window.alert("Your password is " + passwordLength + " characters long!");
   combined.sort(() => Math.random() - 0.2);
-  var lastList = [ combined.slice(0, passwordLength)]
-  var finaleList = (lastList.join(''))
-  return(finaleList)
+  var lastList = combined.slice(0, passwordLength);
+  var finaleList = (lastList.join(''));
+  return(finaleList);
 }
 // Write password to the #password input
 function writePassword() {
