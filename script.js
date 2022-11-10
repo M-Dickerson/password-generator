@@ -41,7 +41,7 @@ function generatePassword() {
   var userUpperCase = window.confirm("Do you want to include uppercase letters in your password?");
   var userNumeric = window.confirm("Do you want to include numbers in your password?");
   var userSpecialCharacters = window.confirm("Do you want to include lowercase letters in your password?");
-
+// * Combines each array into one
   if (userLowerCase === true) {
     var combined = lowerCase.concat(combined);
     combined.push(lowerCase);
@@ -58,6 +58,10 @@ function generatePassword() {
     var combined = specialCharacters.concat(combined);
     combined.push(specialCharacters);
   }
+// * If the user doesn't select anything at all
+if (!userLowerCase && !userUpperCase && !userNumeric && !userSpecialCharacters) {
+  window.alert("Please pick at least one character type for your password");
+}
 }
 
 
